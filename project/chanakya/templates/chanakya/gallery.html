@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+<body>
+    {% include 'chanakya/navbar.html' %} 
+    <section class='gallery min-vh-80'>
+              <div class='container shadow p-4 ' >
+                  <h1 class="display-6 gtxt " >Events</h1>
+                  <hr class="galleryl"></hr>
+                  
+                <div class='row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-4'>
+                    {% for x in event %}
+                    <div class="col ">
+                          <img src="{{ x.image.url }}" class="gallery-item img" alt=""></img>
+                    </div>
+                    {% endfor %}  
+                </div>  
+                </div> 
+                  <br></br>
+              <div class='container  shadow p-4'>
+                  <h1 class="display-6 gtxt " >Sports</h1>
+                  <hr class="galleryl"></hr>
+                  
+                  <div class='row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-4'>
+                    {% for x in sport %}
+                      <div class="col ">
+                        <img src="{{ x.image.url }}" class="img-thumbnail" data-toggle="modal" data-target="#myModal{{ x.id }}">
+                          <!-- <img src="{{ x.image.url }}" data-toggle="modal" data-target="#myModal" class="gallery-item img" alt=""></img> -->
+                      </div>
+                     {% endfor %} 
+                       
+                  </div>   
+                  </div> 
+                  <br></br>
+              <div class='container shadow p-4'>
+                  <h1 class="display-6 gtxt " >Achievements</h1>
+                  <hr class="galleryl"></hr>
+                  
+                  <div class='row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-4'>
+                     {% for x in achievement %}
+                      <div class="col ">
+                          <img src="{{ x.image.url }}" class="gallery-item img" alt=""></img>
+                      </div>
+                     {% endfor %}
+                     
+                  </div>
+                     </div>
+                       <div class="modal fade" id="myModal{{ x.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <img src="{{ x.image.url }}" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+  </div>
+</div>
+        </section> 
+        {% include 'chanakya/footer.html' %} 
+        <style>
+            .gallery{
+    background-color:rgb(255, 255, 255);
+    padding: 40px 0;
+   
+}
+
+img{
+    max-width:100%;
+    
+    height:100%
+}
+.gallery img{
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.gallery img:hover{
+    opacity: 1;
+    transform: scale(1.10);
+    animation-fill-mode: forwards;
+}
+.galleryl{
+    opacity: 1;
+        background-color: #643939;
+        border-radius: 99px;
+        border-style: none;
+        height: 0.2rem;
+        width: 5rem;
+       
+}
+.facultyl {
+    opacity: 1;
+    background-color: #643939;
+    border-radius: 99px;
+    border-style: none;
+    height: 0.2rem;
+    width: 7rem;
+    margin:auto;
+}
+.schooll {
+    opacity: 1;
+    background-color: #643939;
+    border-radius: 99px;
+    border-style: none;
+    height: 0.2rem;
+    width: 7rem;
+   
+}
+.schooltxt{
+    font-weight:350;
+    font-size:1.3rem;
+}
+.gtxt {
+    font-weight: 500;
+    color: rgb(146, 83, 1);
+}
+        </style>
+</body>
+</html>

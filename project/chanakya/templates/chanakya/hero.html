@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+  
+ <div class="container shadow p-4 my-4 text-center">
+        <div class="row my-4 ">
+          <div class="col mb-4 ">
+            <div className="container" >
+            <h1 class="display-4 disp" >Welcome to </h1>
+            <h1 class="display-5">Chanakya Vidya Mandir</h1>
+            </div>
+            <br></br>
+            <div className="container  justify-content-end">
+              <p class="txt">For us, education is an umbrella term which has a wide range of purposeful pursuits and we, at chankaya, focus on them with great diligence.
+                For us, education is an umbrella term which has a wide range of purposeful pursuits and we, at chankaya, focus on them with great diligence.
+              </p>
+            </div>
+            
+          </div>
+
+          <div class="col-sm-6">
+            <div class="lightbox">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img
+                    src="{% static 'chanakya/children3.png' %}"
+                    alt="Table Full of Spices"
+                    class="w-100 mb-2 mb-md-4 h-50 shadow-1-strong rounded"
+                  />
+                  <img
+                    src="{% static 'chanakya/school2.png' %}"
+                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+                    alt="Coconut with Strawberries"
+                    class="w-100 h-50 shadow-1-strong rounded"
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    src="{% static 'chanakya/children4.png' %}"
+                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+                    alt="Dark Roast Iced Coffee"
+                    class="w-100 shadow-1-strong rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+      <style>
+        .disp{
+    color:rgb(170, 77, 1);
+    font-weight: bold;
+    font-style: oblique;
+}
+.disp1{     
+    font-weight: bold;
+    color:rgb(71, 107, 41);
+    font-style: oblique;
+} .txt{
+    font-weight: 450;
+    font-size:140%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+      </style>
+</body>
+</html>

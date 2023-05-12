@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        /* Set the image as the background of the page */
+        body {
+            background-image: url("{% static 'chanakya/school2.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Center the text on the page */
+        .splash-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div class="splash-text">
+        <h1>Welcome to my website</h1>
+        <p>Please wait while we load the content...</p>
+    </div>
+    <script>
+        // Redirect to the main page after 5 seconds
+        setTimeout(function() {
+            window.location.href = "{% url '/' %}";
+        }, 1000); // Delay in milliseconds
+    </script>
+</body>
+</html>
