@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SchoolProfile</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
@@ -15,13 +17,14 @@
                       <img src="{% static 'chanakya/school.png' %}" alt="placeholder 960" class="img-responsive w-100 h-100" />    
                
           </div>
-         
+          <div data-aos="zoom-in-right" data-aos-duration="1500">
             <div class="container my-5 shadow p-3">
               <h1 class="display-5 gtxt " >School Profile</h1>
               <hr class="schooll"></hr>
               <br></br>
               <p class="schooltxt"> We are committed to providing a well-rounded education that prepares our students for success in college, careers, and beyond.Our experienced and dedicated faculty work tirelessly to create a challenging and supportive learning environment where students can reach their full potential.We pride ourselves on the diversity of our student body, and we strive to create a welcoming and inclusive community that values the unique perspectives and experiences of all our students.At Chanakya, we believe that education should be accessible to all students, regardless of their background or financial means, and we offer a range of scholarships and financial aid opportunities to help make this possible.We are proud of the achievements of our alumni, many of whom have gone on to become leaders in their fields and make meaningful contributions to society.
                   Our school has a rich history and a strong tradition of academic excellence, and we are excited to continue building on this legacy as we look towards the future.</p>
+            </div>
             </div>
     {% include 'chanakya/footer.html' %} 
             <style>
@@ -44,4 +47,7 @@
 }
             </style>
 </body>
+<script>
+    AOS.init();
+</script>
 </html>
